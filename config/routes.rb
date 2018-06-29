@@ -53,4 +53,9 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  # get 'posts/:id', to: 'posts#show'
+  resources :posts, only: :show
+  # :id - tells routing system that this rouate can receive a parameter
+  # and - that the paramter will be routed to the controller's show action.
 end
